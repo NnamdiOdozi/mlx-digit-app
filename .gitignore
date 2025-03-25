@@ -39,5 +39,5 @@ Thumbs.db
 **/tmp/
 
 # 9. Word documents
-.doc
+*.docx
 
