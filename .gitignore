@@ -1,0 +1,38 @@
+# 1. Environment variables
+.env
+
+# 2. Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+*.pyd
+
+# 3. Virtual environments
+venv/
+.myenv/
+env/
+myenv/
+
+# 4. Jupyter and notebook checkpoints
+.ipynb_checkpoints
+
+# 5. Data and models (you can choose what to commit)
+*.db
+*.sqlite3
+*.h5
+*.log
+
+# 6. System files
+.DS_Store
+Thumbs.db
+
+# 7. VS Code and IDE settings
+.vscode/
+.idea/
+
+# 8. Docker
+**/tmp/
+
+
