@@ -23,6 +23,9 @@ myenv/
 *.sqlite3
 *.h5
 *.log
+main.ipynb
+*Fashion MNIST*.ipynb
+*Transfer Learning*.ipynb
 
 # 6. System files
 .DS_Store
@@ -35,4 +38,6 @@ Thumbs.db
 # 8. Docker
 **/tmp/
 
+# 9. Word documents
+.doc
 
