@@ -43,11 +43,15 @@ This repo includes a pre-trained CNN for MNIST digit recognition:
 You can retrain your own using `CNNModelMNIST.py` or swap in a different `.pth`.
 
 ## Deployment
-  2 Docker containers were used as per the project structure.  One for the PyTorch Model and Streamlit App and the second for the initialisiation of the Postgres DB
+  Two Docker containers were used as per the project structure.  One for the PyTorch Model and Streamlit App and the second for the initialisiation of the Postgres DB
   Containers were built and hosted on Hetzner VPS Instance
   Git Hub actions were used to push any changes to the app folder automatically to the VPS using ssh login and there to re-build the container
   Docker-compose was used to automatically restart the App anytime the VPS was rebooted
   On first run, the `init.sql` script (in `db/init.sql`) sets up the PostgreSQL schema for logging predictions. Docker Compose handles this automatically.
+
+ The Postgres database table is shown below after over 20 attemopts had been logged
+
+ ![image](https://github.com/user-attachments/assets/279e00a1-b5a3-4bef-9fa4-c37f7370bb12)
 
 
 ## Ideas for future
