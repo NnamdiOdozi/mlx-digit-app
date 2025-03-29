@@ -12,6 +12,7 @@ Try it out here: URL: http://138.199.200.113:8501
 
 ## Data
 The MNIST dataset was used
+Preprocessing:
 
 ## Model Architecture
  - File
@@ -19,7 +20,8 @@ The MNIST dataset was used
 
 
 ## Training
- - In order to make use of GPUs and so speed up training, model was run in a Google Colab Notebook
+ - In order to make use of GPUs and so speed up training, model was run in a Google Colab Notebook, Model was run for 10 epochs
+   
 ## Model Evaluation
  - File
 
@@ -44,14 +46,8 @@ You can retrain your own using `CNNModelMNIST.py` or swap in a different `.pth`.
   2 Docker containers were used as per the project structure.  One for the PyTorch Model and Streamlit App and the second for the initialisiation of the Postgres DB
   Containers were built and hosted on Hetzner VPS Instance
   Git Hub actions were used to push any changes to the app folder automatically to the VPS using ssh login and there to re-build the container
- - Streamlit
- - PostGres DB
-
-## 🗃️ Database Init
-
-On first run, the `init.sql` script (in `db/init.sql`) sets up the PostgreSQL schema for logging predictions.
-
-Docker Compose handles this automatically.
+  Docker-compose was used to automatically restart the App anytime the VPS was rebooted
+  On first run, the `init.sql` script (in `db/init.sql`) sets up the PostgreSQL schema for logging predictions. Docker Compose handles this automatically.
 
 
 ## Ideas for future
