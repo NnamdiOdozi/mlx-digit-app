@@ -47,3 +47,8 @@ You can retrain your own using `CNNModelMNIST.py` or swap in a different `.pth`.
 On first run, the `init.sql` script (in `db/init.sql`) sets up the PostgreSQL schema for logging predictions.
 
 Docker Compose handles this automatically.
+
+
+## Ideas for future
+ - trying out different models eg Vision Transformers, LLMs like ChatGPT
+ - Splitting out the model from the Streamlit app so that there are 3 containers instead of 2
