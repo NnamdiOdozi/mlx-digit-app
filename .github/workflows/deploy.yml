@@ -22,4 +22,5 @@ jobs:
           script: |
             cd ~/mlx-digit-app
             git pull
+            docker-compose down
             docker-compose up -d --build
