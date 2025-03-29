@@ -207,7 +207,7 @@ with col2:
                 with conn.cursor() as cur:
                     cur.execute("""
                         UPDATE prediction_logs
-                        SET actual_digit = %s
+                        SET actual = %s
                         WHERE id = (SELECT MAX(id) FROM prediction_logs);
                     """, (int(true_label),))
                     conn.commit()
