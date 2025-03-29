@@ -1,12 +1,12 @@
 # docker-compose.yaml
 
-
 services:
   app:
     build:
       context: .
       dockerfile: ./app/Dockerfile
     container_name: mlx-app
+    restart: unless-stopped  # <-- Added restart policy
     ports:
       - "${PORT:-8501}:8501"
     environment:
@@ -24,7 +24,7 @@ services:
   db:
     image: postgres:16
     container_name: mlx-db
-    restart: always
+    restart: always  # Keep as is
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
@@ -34,7 +34,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
-    healthcheck:  # Add this section
+    healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 10s
       timeout: 5s
