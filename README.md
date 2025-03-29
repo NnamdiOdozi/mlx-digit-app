@@ -6,16 +6,36 @@ The user draws a digit on the slate and then presses the predict button.  If the
 Try it out here: URL: http://138.199.200.113:8501
 
 
+## Project Structure
+
+MLX_PROJECT/
+├── app/
+│   ├── main.py               # Contains UI + model prediction logic
+│   ├── CNNModelMNIST.py      # PyTorch model definition
+│   ├── model.pth             # Saved model weights
+│   ├── Dockerfile            # For Streamlit app
+│   └── ...
+│
+├── db/                       # Optional Postgres init scripts
+│   └── init.sql
+│
+├── docker-compose.yml        # Streamlit app + Postgres
+├── requirements.txt          # App + ML dependencies
+├── .env                      # DB and port settings
+└── README.md
+
+
 
 ## Data
 
 
 ## Model Architecture
  - File
-- Design
+- ![image](https://github.com/user-attachments/assets/69745b30-4741-4dc2-8dd4-614bbcf26b06)
+
 
 ## Training
- - File
+ - In order to make use of GPUs and so speed up training, model was run in a Google Colab Notebook
 ## Model Evaluation
  - File
 
@@ -50,5 +70,5 @@ Docker Compose handles this automatically.
 
 
 ## Ideas for future
- - trying out different models eg Vision Transformers, LLMs like ChatGPT
+ - trying out different models eg LeNet5, Vision Transformers, LLMs like ChatGPT
  - Splitting out the model from the Streamlit app so that there are 3 containers instead of 2
