@@ -7,27 +7,11 @@ Try it out here: URL: http://138.199.200.113:8501
 
 
 ## Project Structure
-
-MLX_PROJECT/
-├── app/
-│   ├── main.py               # Contains UI + model prediction logic
-│   ├── CNNModelMNIST.py      # PyTorch model definition
-│   ├── model.pth             # Saved model weights
-│   ├── Dockerfile            # For Streamlit app
-│   └── ...
-│
-├── db/                       # Optional Postgres init scripts
-│   └── init.sql
-│
-├── docker-compose.yml        # Streamlit app + Postgres
-├── requirements.txt          # App + ML dependencies
-├── .env                      # DB and port settings
-└── README.md
-
+![image](https://github.com/user-attachments/assets/c68b8faa-fc64-48dc-bfa2-3717b45c775c)
 
 
 ## Data
-
+The MNIST dataset was used
 
 ## Model Architecture
  - File
@@ -57,8 +41,9 @@ This repo includes a pre-trained CNN for MNIST digit recognition:
 You can retrain your own using `CNNModelMNIST.py` or swap in a different `.pth`.
 
 ## Deployment
-  2 Docker containers
-  Hosted on Hetzner VPS Instance
+  2 Docker containers were used as per the project structure.  One for the PyTorch Model and Streamlit App and the second for the initialisiation of the Postgres DB
+  Containers were built and hosted on Hetzner VPS Instance
+  Git Hub actions were used to push any changes to the app folder automatically to the VPS using ssh login and there to re-build the container
  - Streamlit
  - PostGres DB
 
