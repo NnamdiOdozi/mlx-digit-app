@@ -7,6 +7,21 @@ Try it out here: URL: http://138.199.200.113:8501
 
 
 
+## Data
+
+
+## Model Architecture
+ - File
+- Design
+
+## Training
+ - File
+## Model Evaluation
+ - File
+
+## Inference
+File
+
 ## 🧠 Model Weights
 
 This repo includes a pre-trained CNN for MNIST digit recognition:
@@ -15,7 +30,11 @@ This repo includes a pre-trained CNN for MNIST digit recognition:
 
 You can retrain your own using `CNNModelMNIST.py` or swap in a different `.pth`.
 
----
+## Deployment
+  2 Docker containers
+  Hosted on Hetzner VPS Instance
+ - Streamlit
+ - PostGres DB
 
 ## 🗃️ Database Init
 
