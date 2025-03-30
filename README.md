@@ -55,5 +55,5 @@ You can retrain your own using `CNNModelMNIST.py` or swap in a different `.pth`.
 
 
 ## Ideas for future
- - trying out different models eg LeNet5, Vision Transformers, Google Vision API, LLMs like ChatGPT
+ - trying out different models eg LeNet-5, Vision Transformers, Capsule Networks, Google Vision API, LLMs like ChatGPT
  - Splitting out the model from the Streamlit app so that there are 3 containers instead of 2
