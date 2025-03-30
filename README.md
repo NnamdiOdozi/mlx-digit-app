@@ -18,10 +18,13 @@ Preprocessing:
 ## Model Architecture
  - 
 - ![image](https://github.com/user-attachments/assets/69745b30-4741-4dc2-8dd4-614bbcf26b06)
-
+  
 
 ## Training
- - In order to make use of GPUs and so speed up training, model was run in a Google Colab Notebook, Model was run for 10 epochs
+ - In order to make use of GPUs and so speed up training, model was run in a Google Colab Notebook, Model was run for 10 epochs. Othe training details including hyper-parameters are as per the screenshot below:
+
+ - ![image](https://github.com/user-attachments/assets/4a8ccb3d-c03f-4322-9241-ca66b3819682)
+
    
 ## Model Evaluation
  - 
