@@ -12,10 +12,11 @@ Try it out here: URL: http://138.199.200.113:8501
 
 ## Data
 The MNIST dataset was used
+
 Preprocessing:
 
 ## Model Architecture
- - File
+ - 
 - ![image](https://github.com/user-attachments/assets/69745b30-4741-4dc2-8dd4-614bbcf26b06)
 
 
@@ -23,7 +24,7 @@ Preprocessing:
  - In order to make use of GPUs and so speed up training, model was run in a Google Colab Notebook, Model was run for 10 epochs
    
 ## Model Evaluation
- - File
+ - 
 
 ![image](https://github.com/user-attachments/assets/b52b9aa2-f333-4744-9858-90f60bd6d844)
 
