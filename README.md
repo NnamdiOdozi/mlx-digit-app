@@ -28,7 +28,7 @@ Preprocessing:
    
 ## Model Evaluation
  - 
-
+Model accuracy of over 90% was achieved on the MNIST test dataset.
 ![image](https://github.com/user-attachments/assets/b52b9aa2-f333-4744-9858-90f60bd6d844)
 
 ![image](https://github.com/user-attachments/assets/774a7021-7221-4332-a1bf-40490dc6136f)
