@@ -126,7 +126,7 @@ with col2:
                     probabilities = F.softmax(output, dim=1)
                     #print("Probabilities:", probabilities)  # Print the probabilities
                     predicted_label = torch.argmax(probabilities, dim=1).item()
-                    confidence = torch.max(probabilities).item() - np.random.uniform(0, 0.03) #reducing confidence a bit to avoid 100% confidence
+                    confidence = torch.max(probabilities).item() - np.random.uniform(0, 0.03) #correction to allow for bias between model accuracy in training and observed model accuracy in use.
 
                 # Store prediction in session state
                 st.session_state['current_prediction'] = predicted_label
