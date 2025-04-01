@@ -219,7 +219,7 @@ with col2:
 
 # **Example Image - Display Below the Canvas**
 #st.markdown("<br><br><br>", unsafe_allow_html=True)  # Adds some vertical space
-st.subheader("Example Drawing from Training Data")  # Optional title or description
+st.subheader("Example Drawings from Training Data")  # Optional title or description
 #image_path = "C:/Users/nnamd/OneDrive/Python_learning/MLX Project/data/training_digits.png"
 image_path = "training_digits.png"
 st.image(image_path, caption="Example Image", width=200)
