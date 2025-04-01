@@ -20,7 +20,7 @@ services:
       - db
     volumes:
       - ./app:/app
-      - ./data:/app/data  # <-- Add this line to mount the data folder
+      - ./app/data:/app/data  # <-- Add this line to mount the data folder
 
   db:
     image: postgres:16
