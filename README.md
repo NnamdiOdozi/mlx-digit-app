@@ -5,6 +5,9 @@ The user draws a digit on the slate and then presses the predict button.  If the
 
 Try it out here: URL: http://138.199.200.113:8501
 
+![image](https://github.com/user-attachments/assets/fafc085f-82c0-4bb0-805d-01b5934e387d)
+
+
 
 ## Project Structure
 ![image](https://github.com/user-attachments/assets/c68b8faa-fc64-48dc-bfa2-3717b45c775c)
