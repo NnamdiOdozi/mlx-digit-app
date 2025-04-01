@@ -112,7 +112,7 @@ with col2:
     
     predict_button_container = st.empty()  # Ensures proper positioning
     with predict_button_container:
-        if st.button("Predict"):
+        if st.button("Recognise"):
             if canvas_result.image_data is not None:
                 canvas_array = np.mean(canvas_result.image_data[:, :, :3], axis=2)
                 image = Image.fromarray(canvas_array)
