@@ -244,7 +244,7 @@ if st.session_state['prediction_log']:
         <div style="text-align: center; font-size: 18px; padding: 10px; border-radius: 5px; background-color: #f8f9fa;">
             <b>Total Attempts:</b> {total_attempts} &nbsp;|&nbsp;
             <b>Correct Predictions:</b> {correct_predictions} &nbsp;|&nbsp;
-            <b>Realized Accuracy:</b> {accuracy:.2f}%
+            <b>Realized Accuracy:</b> {accuracy:.0f}%
         </div>
         """,
         unsafe_allow_html=True,
