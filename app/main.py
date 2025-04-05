@@ -24,7 +24,7 @@ DB_NAME = os.getenv("DB_NAME")
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 
-# Testing my github CI again
+# Activating my github CI again 
 
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
