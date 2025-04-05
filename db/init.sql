@@ -17,11 +17,20 @@
 -- Connect to that database to create tables (only works manually; not inside init.sql)
 -- So instead, create the table in the default DB
 
--- Create table (in default DB)
-CREATE TABLE IF NOT EXISTS prediction_logs (
-    id SERIAL PRIMARY KEY,
-    timestamp TIMESTAMP NOT NULL,
-    prediction INTEGER NOT NULL,
-    confidence NUMERIC(5, 0) NOT NULL,
-    actual INTEGER NOT NULL
-);
+
+-- Connect to default 'postgres' DB
+\c postgres;
+
+-- Conditionally create the database
+-- DO
+-- $$
+-- BEGIN
+--    IF NOT EXISTS (
+--       SELECT FROM pg_database
+--       WHERE datname = 'odozi_mlx_digit_recognizer'
+--    ) THEN
+CREATE DATABASE odozi_mlx_digit_recognizer;
+--    END IF;
+-- END
+-- $$;
+
