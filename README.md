@@ -10,7 +10,12 @@ Try it out here: URL: http://138.199.200.113:8501
 
 
 ## Project Structure
-![image](https://github.com/user-attachments/assets/c68b8faa-fc64-48dc-bfa2-3717b45c775c)
+![image](https://github.com/user-attachments/assets/c1578f63-b976-426c-9739-3267c0a1a002)
+
+![image](https://github.com/user-attachments/assets/d586ff46-ba9a-4b70-99ae-42d2b03a41c1)
+
+
+![image](https://github.com/user-attachments/assets/ae7f3438-d2ff-429c-aefb-c40bbeb3168d)
 
 
 ## Data
