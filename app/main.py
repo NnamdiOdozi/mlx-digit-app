@@ -8,8 +8,8 @@ from torchvision import transforms
 import pandas as pd
 import datetime  
 
-from app.CNNModelMNIST import CNNModel
-from app import utils 
+from CNNModelMNIST import CNNModel
+import utils 
 
 import psycopg2
 from dotenv import load_dotenv
@@ -71,18 +71,6 @@ def load_model():
 
 model = load_model()
 
-# # Define preprocessing transform
-# transform = transforms.Compose([
-#     transforms.Resize((28, 28), interpolation=transforms.InterpolationMode.LANCZOS),
-#     transforms.ToTensor(),
-#     transforms.Normalize((0.5,), (0.5,))
-# ])
-
-# def preprocess_image(image):
-#     """Preprocess the image from canvas to match MNIST dataset."""
-#     image = transform(image)  
-#     return image
-
 if 'prediction_log' not in st.session_state:
     st.session_state['prediction_log'] = []
 
@@ -121,7 +109,7 @@ with col2:
             if canvas_result.image_data is not None:
                 canvas_array = np.mean(canvas_result.image_data[:, :, :3], axis=2)
                 image = Image.fromarray(canvas_array)
-                image_tensor = preprocess_image(image).to(device)
+                image_tensor = utils.preprocess_image(image).to(device)
 
                 with torch.no_grad():
                     output = model(image_tensor)
@@ -227,6 +215,7 @@ with col2:
 st.subheader("Example Drawings from Training Data")  # Optional title or description
 #image_path = "C:/Users/nnamd/OneDrive/Python_learning/MLX Project/data/training_digits.png"
 image_path = "data/training_digits.png"
+#image_path = os.path.join(os.path.dirname(__file__), "data", "training_digits.png")
 st.image(image_path, caption="Example Image", width=200)
 
 
