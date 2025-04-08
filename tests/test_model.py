@@ -1,6 +1,18 @@
+import sys
+import os
+
+# Insert the 'app' directory into sys.path if it's not already there
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+app_dir = os.path.join(project_root, 'app')
+if app_dir not in sys.path:
+    sys.path.insert(0, app_dir)
+
+
 import unittest
 import torch
-from app.CNNModelMNIST import CNNModel
+from CNNModelMNIST import CNNModel
+from utils import preprocess_image
+
 
 class TestCNNModel(unittest.TestCase):
     def setUp(self):
