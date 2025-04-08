@@ -8,7 +8,8 @@ from torchvision import transforms
 import pandas as pd
 import datetime  
 
-from CNNModelMNIST import CNNModel 
+from app.CNNModelMNIST import CNNModel
+from app import utils 
 
 import psycopg2
 from dotenv import load_dotenv
@@ -16,6 +17,8 @@ import os
 
 # Load variables from .env into environment
 load_dotenv()
+
+
 
 # Access them
 DB_HOST = os.getenv("DB_HOST", "db")
@@ -59,24 +62,26 @@ st.markdown(
 @st.cache_resource
 def load_model():
     model = CNNModel().to(device)
-    model.load_state_dict(torch.load('mnist_cnn.pth', map_location=device))  
+    # Build the path relative to the current file (main.py)
+    model_path = os.path.join(os.path.dirname(__file__), 'mnist_cnn.pth')
+    model.load_state_dict(torch.load(model_path, map_location=device))  
     model.eval()  
     print("Model loaded successfully!")
     return model
 
 model = load_model()
 
-# Define preprocessing transform
-transform = transforms.Compose([
-    transforms.Resize((28, 28), interpolation=transforms.InterpolationMode.LANCZOS),
-    transforms.ToTensor(),
-    transforms.Normalize((0.5,), (0.5,))
-])
+# # Define preprocessing transform
+# transform = transforms.Compose([
+#     transforms.Resize((28, 28), interpolation=transforms.InterpolationMode.LANCZOS),
+#     transforms.ToTensor(),
+#     transforms.Normalize((0.5,), (0.5,))
+# ])
 
-def preprocess_image(image):
-    """Preprocess the image from canvas to match MNIST dataset."""
-    image = transform(image)  
-    return image
+# def preprocess_image(image):
+#     """Preprocess the image from canvas to match MNIST dataset."""
+#     image = transform(image)  
+#     return image
 
 if 'prediction_log' not in st.session_state:
     st.session_state['prediction_log'] = []
