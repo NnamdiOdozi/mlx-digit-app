@@ -25,7 +25,7 @@ services:
   db:
     image: postgres:16
     container_name: mlx-db
-    restart: always  # Keep as is
+    restart: unless-stopped  # Keep as is
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
