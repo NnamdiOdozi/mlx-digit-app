@@ -19,7 +19,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./app:/app
+      #- ./app:/app
       - ./app/data:/app/data  # <-- Add this line to mount the data folder
 
   db:
