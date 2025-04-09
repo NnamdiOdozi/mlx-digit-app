@@ -55,7 +55,7 @@ COPY --from=build /usr/local/bin /usr/local/bin
 
 # Copy the application code from the build context (your local machine)
 # This assumes main.py and other necessary files are in the same directory as the Dockerfile
-COPY . .
+COPY ./app/ .
 # If your code is in a subdirectory (e.g., 'src'), use:
 # COPY ./src .
 
