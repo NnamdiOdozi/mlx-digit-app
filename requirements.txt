@@ -1,5 +1,9 @@
+# CPU-only PyTorch from special index
+--index-url https://download.pytorch.org/whl/cpu
 torch>=2.0
 torchvision>=0.15
+# Switch back to default PyPI for other packages
+--index-url https://pypi.org/simple/
 matplotlib>3.6
 numpy
 pandas
