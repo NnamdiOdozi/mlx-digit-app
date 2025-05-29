@@ -1,18 +1,16 @@
-# Use CPU-only PyTorch, explicitly
+# CPU-only PyTorch with fixed versions
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.0.1+cpu
 torchvision==0.15.2+cpu
 
-
-# Switch back to default PyPI for other packages
-#--index-url https://pypi.org/simple/
-matplotlib>=3.6.0
-numpy>=1.24.0
-pandas>=2.0.0
-ipykernel>=6.0.0
-streamlit>=1.28.0
-streamlit-drawable-canvas>=0.9.0
-psycopg2-binary>=2.9.0
-pillow>=9.0.0
-#opencv-python>=4.7.0
-python-dotenv>=1.0.0
+# Fixed versions of key packages to ensure compatibility
+numpy==1.24.3
+matplotlib==3.7.1
+pandas==2.0.2
+ipykernel==6.25.0
+streamlit==1.28.0
+streamlit-drawable-canvas==0.9.3
+psycopg2-binary==2.9.6
+pillow==9.5.0
+opencv-python==4.7.0.72
+python-dotenv==1.0.0

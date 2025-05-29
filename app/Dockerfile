@@ -18,13 +18,18 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # Copy requirements file
 COPY requirements.txt .
 
-# Install Python dependencies with explicit verification
+# Install Python dependencies ensuring numpy compatibility
 RUN pip install --no-cache-dir --upgrade pip && \
+    # Install numpy first to ensure it's available for PyTorch
+    pip install --no-cache-dir numpy==1.24.3 && \
+    # Then install other requirements
     pip install --no-cache-dir -r requirements.txt && \
-    # Verify streamlit is installed
+    # Verify installations
+    python -c "import numpy; print(f'NumPy version: {numpy.__version__}')" && \
+    python -c "import torch; print(f'PyTorch version: {torch.__version__}'); print(f'CUDA available: {torch.cuda.is_available()}')" && \
     python -c "import streamlit; print(f'Streamlit version: {streamlit.__version__}')" && \
-    # Verify torch is CPU only
-    python -c "import torch; print(f'PyTorch version: {torch.__version__}'); print(f'CUDA available: {torch.cuda.is_available()}')"
+    # Make sure numpy and torch interop works
+    python -c "import torch; import numpy as np; t = torch.ones(3,3); print(t.numpy())"
 
 # Copy application code
 COPY ./app/ .
